@@ -1,0 +1,14 @@
+@keyframes newsFlash {
+	0% {
+		opacity:1;
+		transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+	}
+	100% {
+		opacity:1;
+		transform:  rotate(2880deg) scaleX(1.5) scaleY(1.5) ;
+	}
+}
+
+.newsFlash {
+  animation-name: newsFlash;
+}
