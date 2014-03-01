@@ -6,7 +6,7 @@
 ##Usage
 To use dynamio.css in your website, simply drop the stylesheet into your document's `<head>`, and add the class `animated` to an element, along with any of the animation names. That's it! You've got a CSS animated element. Super!
 
-```
+```html
 <head>
 	<link rel="stylesheet" href="dynamio.min.css">
 </head>
@@ -14,7 +14,7 @@ To use dynamio.css in your website, simply drop the stylesheet into your documen
 
 You can do a whole bunch of other stuff with dynamio.css when you combine it with jQuery or add your own CSS rules. Dynamically add animations using jQuery with ease:
 
-```
+```javascript
 $('#yourElement').addClass('animated bounceOutLeft');
 ```
 
@@ -26,13 +26,13 @@ Before you make changes to this file, you should know that $('#yourElement').one
 http://api.jquery.com/one/
 -->
 
-```
+```javascript
 $('#yourElement').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething());
 ```
 
 You can change the duration of your animations, add a delay or change the number of times that it plays:
 
-```
+```css
 #yourElement {
 	-vendor-animation-duration: 3s;
 	-vendor-animation-delay: 2s;
@@ -45,14 +45,14 @@ You can change the duration of your animations, add a delay or change the number
 ## Custom Builds
 Dynamio.css is powered by [Grunt](http://gruntjs.com), and you can create custom builds pretty easily. First of all, you’ll need Grunt and all other dependencies:
 
-```
+```sh
 $ cd path/to/animate.css/
 $ sudo npm install
 ```
 
 Next, run `grunt watch` to watch for changes and compile your custom builds. For example, if you want only some of the the “attention seekers”, simply edit the `animate-config.json` file to select only the animations you want to use.
 
-```
+```javascript
 "attention_seekers": {
   "bounce": true,
   "flash": false,
