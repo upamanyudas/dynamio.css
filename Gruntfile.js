@@ -36,16 +36,6 @@ module.exports = function(grunt) {
       },
     },
 
-    //Copy
-    copy: {
-      main: {
-        files: [
-          // includes files within path
-          {expand: true, src: ['*.css'], dest: 'gh-pages/', filter: 'isFile'},
-        ]
-      }
-    },
-
     // Watch files for changes
     watch: {
       css: {
@@ -54,15 +44,15 @@ module.exports = function(grunt) {
           '!node_modules',
           'dynamio-config.json'
         ],
-        // Run Sass, autoprefixer, CSSO and Copy
-        tasks: ['concat-anim', 'autoprefixer', 'cssmin', 'copy'],
+        // Run Sass, autoprefixer and CSSmin
+        tasks: ['concat-anim', 'autoprefixer', 'cssmin'],
       }
     }
 
   });
 
   // Register our tasks
-  grunt.registerTask('default', ['concat-anim', 'autoprefixer', 'cssmin', 'copy', 'watch']);
+  grunt.registerTask('default', ['concat-anim', 'autoprefixer', 'cssmin', 'watch']);
 
   grunt.registerTask('concat-anim', 'Concatenates activated animations', function () {
     var config = grunt.file.readJSON('dynamio-config.json'),
