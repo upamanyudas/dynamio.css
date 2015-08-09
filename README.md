@@ -66,3 +66,6 @@ Next, run `grunt watch` to watch for changes and compile your custom builds. For
 
 ## License
 Dynamio.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+
+##Disclaimer
+This project is forked with certain new animations from - https://daneden.github.io/animate.css/
