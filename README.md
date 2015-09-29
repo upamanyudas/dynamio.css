@@ -15,7 +15,7 @@ To use dynamio.css in your website, simply drop the stylesheet into your documen
 You can do a whole bunch of other stuff with dynamio.css when you combine it with jQuery or add your own CSS rules. Dynamically add animations using jQuery with ease:
 
 ```javascript
-$('#yourElement').addClass('animated bounceOutLeft');
+$('#yourElement').addClass('animate bounceOutLeft');
 ```
 
 You can also detect when an animation ends:
